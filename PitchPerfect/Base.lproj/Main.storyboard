@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ptn-43-FU7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -30,18 +30,12 @@
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
                                 <color key="textColor" red="0.011764705882352941" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="169" y="358" width="67" height="16"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkm-AW-f1n">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stopButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="156" y="418" width="105" height="50"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lg9-xP-Jxk"/>
                                 </connections>
@@ -63,12 +57,12 @@
                                 <exclude reference="Dkm-AW-f1n"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="GjV-Be-pOY"/>
-                                <exclude reference="KhH-ak-RRc"/>
+                                <exclude reference="a4s-Tq-Spy"/>
                                 <exclude reference="Bib-ep-N9X"/>
                                 <exclude reference="zWA-H4-3ma"/>
+                                <exclude reference="GjV-Be-pOY"/>
+                                <exclude reference="KhH-ak-RRc"/>
                                 <exclude reference="vqR-66-zVu"/>
-                                <exclude reference="a4s-Tq-Spy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -78,15 +72,16 @@
                                 <include reference="Dkm-AW-f1n"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="GjV-Be-pOY"/>
-                                <include reference="KhH-ak-RRc"/>
+                                <include reference="a4s-Tq-Spy"/>
                                 <include reference="Bib-ep-N9X"/>
                                 <include reference="zWA-H4-3ma"/>
+                                <include reference="GjV-Be-pOY"/>
+                                <include reference="KhH-ak-RRc"/>
                                 <include reference="vqR-66-zVu"/>
-                                <include reference="a4s-Tq-Spy"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="5Qt-Tt-8m6"/>
                     <connections>
                         <outlet property="recordButton" destination="3Gd-CJ-EsR" id="lxV-nC-82V"/>
                         <outlet property="recordingInProgress" destination="WZg-NI-l2p" id="0ko-jm-YG7"/>
@@ -95,6 +90,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1499" y="-552"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rtw-XT-LLZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ptn-43-FU7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lsJ-q1-qyX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="SeI-Xt-1zX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axj-jg-mL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="-557"/>
         </scene>
     </scenes>
     <resources>
