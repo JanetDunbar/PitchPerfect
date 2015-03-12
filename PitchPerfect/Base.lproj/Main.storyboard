@@ -40,8 +40,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="156" y="464" width="105" height="50"/>
+                                    <rect key="frame" x="156" y="418" width="105" height="50"/>
                                 </variation>
+                                <connections>
+                                    <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lg9-xP-Jxk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -49,7 +52,7 @@
                             <constraint firstItem="WZg-NI-l2p" firstAttribute="top" secondItem="3Gd-CJ-EsR" secondAttribute="bottom" constant="8" id="Bib-ep-N9X"/>
                             <constraint firstAttribute="centerX" secondItem="3Gd-CJ-EsR" secondAttribute="centerX" constant="-5" id="GjV-Be-pOY"/>
                             <constraint firstAttribute="centerY" secondItem="3Gd-CJ-EsR" secondAttribute="centerY" id="KhH-ak-RRc"/>
-                            <constraint firstItem="Dkm-AW-f1n" firstAttribute="top" secondItem="3Gd-CJ-EsR" secondAttribute="bottom" constant="114" id="pfQ-rE-9Wc"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Dkm-AW-f1n" secondAttribute="bottom" constant="132" id="a4s-Tq-Spy"/>
                             <constraint firstAttribute="centerX" secondItem="Dkm-AW-f1n" secondAttribute="centerX" constant="-8.5" id="vqR-66-zVu"/>
                             <constraint firstAttribute="centerX" secondItem="WZg-NI-l2p" secondAttribute="centerX" constant="-2.5" id="zWA-H4-3ma"/>
                         </constraints>
@@ -64,8 +67,8 @@
                                 <exclude reference="KhH-ak-RRc"/>
                                 <exclude reference="Bib-ep-N9X"/>
                                 <exclude reference="zWA-H4-3ma"/>
-                                <exclude reference="pfQ-rE-9Wc"/>
                                 <exclude reference="vqR-66-zVu"/>
+                                <exclude reference="a4s-Tq-Spy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -79,8 +82,8 @@
                                 <include reference="KhH-ak-RRc"/>
                                 <include reference="Bib-ep-N9X"/>
                                 <include reference="zWA-H4-3ma"/>
-                                <include reference="pfQ-rE-9Wc"/>
                                 <include reference="vqR-66-zVu"/>
+                                <include reference="a4s-Tq-Spy"/>
                             </mask>
                         </variation>
                     </view>
