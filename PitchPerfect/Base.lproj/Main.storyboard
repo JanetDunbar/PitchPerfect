@@ -25,28 +25,45 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="B0p-I7-x3j"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZg-NI-l2p">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" red="0.011764705882352941" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="169" y="358" width="67" height="16"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WZg-NI-l2p" firstAttribute="top" secondItem="3Gd-CJ-EsR" secondAttribute="bottom" constant="8" id="Bib-ep-N9X"/>
                             <constraint firstAttribute="centerX" secondItem="3Gd-CJ-EsR" secondAttribute="centerX" constant="-5" id="GjV-Be-pOY"/>
                             <constraint firstAttribute="centerY" secondItem="3Gd-CJ-EsR" secondAttribute="centerY" id="KhH-ak-RRc"/>
+                            <constraint firstAttribute="centerX" secondItem="WZg-NI-l2p" secondAttribute="centerX" constant="-2.5" id="zWA-H4-3ma"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="3Gd-CJ-EsR"/>
+                                <exclude reference="WZg-NI-l2p"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="GjV-Be-pOY"/>
                                 <exclude reference="KhH-ak-RRc"/>
+                                <exclude reference="Bib-ep-N9X"/>
+                                <exclude reference="zWA-H4-3ma"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3Gd-CJ-EsR"/>
+                                <include reference="WZg-NI-l2p"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="GjV-Be-pOY"/>
                                 <include reference="KhH-ak-RRc"/>
+                                <include reference="Bib-ep-N9X"/>
+                                <include reference="zWA-H4-3ma"/>
                             </mask>
                         </variation>
                     </view>
