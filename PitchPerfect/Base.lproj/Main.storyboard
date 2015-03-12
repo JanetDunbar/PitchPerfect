@@ -16,25 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gd-CJ-EsR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gd-CJ-EsR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Record Button">
+                                <state key="normal" image="microphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="153" y="285" width="100" height="30"/>
-                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3Gd-CJ-EsR" secondAttribute="centerX" constant="-5" id="GjV-Be-pOY"/>
+                            <constraint firstAttribute="centerY" secondItem="3Gd-CJ-EsR" secondAttribute="centerY" id="KhH-ak-RRc"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="3Gd-CJ-EsR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="GjV-Be-pOY"/>
+                                <exclude reference="KhH-ak-RRc"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3Gd-CJ-EsR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="GjV-Be-pOY"/>
+                                <include reference="KhH-ak-RRc"/>
                             </mask>
                         </variation>
                     </view>
@@ -43,4 +52,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="microphone" width="100" height="100"/>
+    </resources>
 </document>
