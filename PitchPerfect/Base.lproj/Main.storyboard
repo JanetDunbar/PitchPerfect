@@ -25,7 +25,7 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="B0p-I7-x3j"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZg-NI-l2p">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZg-NI-l2p">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
                                 <color key="textColor" red="0.011764705882352941" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,39 +34,59 @@
                                     <rect key="frame" x="169" y="358" width="67" height="16"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkm-AW-f1n">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="156" y="464" width="105" height="50"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WZg-NI-l2p" firstAttribute="top" secondItem="3Gd-CJ-EsR" secondAttribute="bottom" constant="8" id="Bib-ep-N9X"/>
                             <constraint firstAttribute="centerX" secondItem="3Gd-CJ-EsR" secondAttribute="centerX" constant="-5" id="GjV-Be-pOY"/>
                             <constraint firstAttribute="centerY" secondItem="3Gd-CJ-EsR" secondAttribute="centerY" id="KhH-ak-RRc"/>
+                            <constraint firstItem="Dkm-AW-f1n" firstAttribute="top" secondItem="3Gd-CJ-EsR" secondAttribute="bottom" constant="114" id="pfQ-rE-9Wc"/>
+                            <constraint firstAttribute="centerX" secondItem="Dkm-AW-f1n" secondAttribute="centerX" constant="-8.5" id="vqR-66-zVu"/>
                             <constraint firstAttribute="centerX" secondItem="WZg-NI-l2p" secondAttribute="centerX" constant="-2.5" id="zWA-H4-3ma"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="3Gd-CJ-EsR"/>
                                 <exclude reference="WZg-NI-l2p"/>
+                                <exclude reference="Dkm-AW-f1n"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="GjV-Be-pOY"/>
                                 <exclude reference="KhH-ak-RRc"/>
                                 <exclude reference="Bib-ep-N9X"/>
                                 <exclude reference="zWA-H4-3ma"/>
+                                <exclude reference="pfQ-rE-9Wc"/>
+                                <exclude reference="vqR-66-zVu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3Gd-CJ-EsR"/>
                                 <include reference="WZg-NI-l2p"/>
+                                <include reference="Dkm-AW-f1n"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="GjV-Be-pOY"/>
                                 <include reference="KhH-ak-RRc"/>
                                 <include reference="Bib-ep-N9X"/>
                                 <include reference="zWA-H4-3ma"/>
+                                <include reference="pfQ-rE-9Wc"/>
+                                <include reference="vqR-66-zVu"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingInProgress" destination="WZg-NI-l2p" id="0ko-jm-YG7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,5 +94,6 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="stopButton" width="50" height="50"/>
     </resources>
 </document>
