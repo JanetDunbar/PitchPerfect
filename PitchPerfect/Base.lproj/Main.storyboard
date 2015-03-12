@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98681762389915739" green="1" blue="0.96556115694515476" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="WZg-NI-l2p" firstAttribute="top" secondItem="3Gd-CJ-EsR" secondAttribute="bottom" constant="8" id="Bib-ep-N9X"/>
                             <constraint firstAttribute="centerX" secondItem="3Gd-CJ-EsR" secondAttribute="centerX" constant="-5" id="GjV-Be-pOY"/>
@@ -89,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="recordingInProgress" destination="WZg-NI-l2p" id="0ko-jm-YG7"/>
+                        <outlet property="stopButton" destination="Dkm-AW-f1n" id="Nz9-uh-Iuk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
