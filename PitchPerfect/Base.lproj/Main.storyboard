@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ptn-43-FU7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -93,17 +94,50 @@
             </objects>
             <point key="canvasLocation" x="436.5" y="-579"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="cdY-9L-o2y">
             <objects>
-                <viewController id="pA8-CK-Woa" sceneMemberID="viewController">
+                <viewController id="pA8-CK-Woa" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o9b-XO-1Yb"/>
                         <viewControllerLayoutGuide type="bottom" id="gpT-gS-AwI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TzL-8h-NaQ">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcx-5E-JNc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="slowButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="slowAudio:" destination="pA8-CK-Woa" eventType="touchUpInside" id="pPn-dI-ehz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tcx-5E-JNc" firstAttribute="leading" secondItem="TzL-8h-NaQ" secondAttribute="leadingMargin" constant="44" id="ro2-TI-pcG"/>
+                            <constraint firstItem="Tcx-5E-JNc" firstAttribute="top" secondItem="o9b-XO-1Yb" secondAttribute="bottom" constant="60" id="wN2-iU-l8f"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Tcx-5E-JNc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ro2-TI-pcG"/>
+                                <exclude reference="wN2-iU-l8f"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Tcx-5E-JNc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ro2-TI-pcG"/>
+                                <include reference="wN2-iU-l8f"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0S-ST-FDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,9 +162,26 @@
             </objects>
             <point key="canvasLocation" x="-249" y="-559"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="N8I-X1-mss">
+            <objects>
+                <viewController id="Pik-Td-QRo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MLU-42-miz"/>
+                        <viewControllerLayoutGuide type="bottom" id="2bL-TZ-CI1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dUO-OT-N7l">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5b-th-N8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="slowButton" width="100" height="100"/>
         <image name="stopButton" width="50" height="50"/>
     </resources>
 </document>
