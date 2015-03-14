@@ -117,8 +117,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tcx-5E-JNc" firstAttribute="leading" secondItem="TzL-8h-NaQ" secondAttribute="leadingMargin" constant="44" id="ro2-TI-pcG"/>
-                            <constraint firstItem="Tcx-5E-JNc" firstAttribute="top" secondItem="o9b-XO-1Yb" secondAttribute="bottom" constant="60" id="wN2-iU-l8f"/>
+                            <constraint firstItem="Tcx-5E-JNc" firstAttribute="leading" secondItem="TzL-8h-NaQ" secondAttribute="leadingMargin" constant="30" id="ro2-TI-pcG"/>
+                            <constraint firstItem="Tcx-5E-JNc" firstAttribute="top" secondItem="o9b-XO-1Yb" secondAttribute="bottom" constant="50" id="wN2-iU-l8f"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">

@@ -22,7 +22,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
 
-    @IBAction func slowAudio(sender: UIButton) {
+    @IBAction func playSlowAudio(sender: UIButton) {
     }
     /*
     // MARK: - Navigation
