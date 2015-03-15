@@ -22,7 +22,7 @@ class PlaySoundsViewController: UIViewController {
             var filePathUrl = NSURL.fileURLWithPath(filePath)
             //println("the url = \(url!)")
             audioPlayer = AVAudioPlayer(contentsOfURL: filePathUrl, error: nil)
-            
+            audioPlayer.enableRate = true
         } else{
             println("The file path is empty.")
         }
@@ -36,7 +36,7 @@ class PlaySoundsViewController: UIViewController {
 
     @IBAction func slowAudio(sender: UIButton) {
         //Used slowAudio as func name instead of playSlowAudio
-        audioPlayer.enableRate = true
+        audioPlayer.stop()
         audioPlayer.rate = 0.5
         audioPlayer.play()
         println("In slowAudio func")
