@@ -11,7 +11,8 @@ import AVFoundation
 
 
 class PlaySoundsViewController: UIViewController {
-
+    
+    var audioPlayer:AVAudioPlayer!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +21,7 @@ class PlaySoundsViewController: UIViewController {
             //println("filePath is \(filePath)")
             var filePathUrl = NSURL.fileURLWithPath(filePath)
             //println("the url = \(url!)")
-            var audioPlayer = AVAudioPlayer(contentsOfURL: filePathUrl!, error: nil)
+            audioPlayer = AVAudioPlayer(contentsOfURL: filePathUrl, error: nil)
             
         } else{
             println("The file path is empty.")
@@ -33,7 +34,13 @@ class PlaySoundsViewController: UIViewController {
     }
     
 
-    @IBAction func playSlowAudio(sender: UIButton) {
+    @IBAction func slowAudio(sender: UIButton) {
+        //Used slowAudio as func name instead of playSlowAudio
+        audioPlayer.enableRate = true
+        audioPlayer.rate = 0.5
+        audioPlayer.play()
+        println("In slowAudio func")
+        
     }
     /*
     // MARK: - Navigation
