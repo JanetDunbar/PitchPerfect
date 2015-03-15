@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class RecordSoundsViewController: UIViewController {
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var stopButton: UIButton!
@@ -37,7 +37,7 @@ class RecordSoundsViewController: UIViewController {
         recordButton.enabled = false
         //TODO: Record the user's voice
         println("in recordAudio")
-        //Inside func recordAudio(sender: UIButton)
+        
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
         let currentDateTime = NSDate()
@@ -48,12 +48,18 @@ class RecordSoundsViewController: UIViewController {
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
         println(filePath)
         
+        //Set up audio session
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
-        
+        //Initialize and prepare the recorder
         audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
+        audioRecorder.delegate = self
         audioRecorder.meteringEnabled = true
         audioRecorder.record()
+    }
+    
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+        //Save the recorded Audio
     }
 
     @IBAction func stopAudio(sender: UIButton) {
