@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 class PlaySoundsViewController: UIViewController {
 
@@ -14,6 +16,12 @@ class PlaySoundsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
+            //println("filePath is \(filePath)")
+            
+        } else{
+            println("The file path is empty.")
+        }
     }
 
     override func didReceiveMemoryWarning() {
