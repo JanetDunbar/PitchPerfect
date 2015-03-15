@@ -37,13 +37,15 @@ class PlaySoundsViewController: UIViewController {
         //Used slowAudio as func name instead of playSlowAudio
         audioPlayer.stop()
         audioPlayer.rate = 0.5
+        audioPlayer.currentTime = 0.0
         audioPlayer.play()
         println("In slowAudio func")
     }
     
     @IBAction func fastAudio(sender: UIButton) {
         audioPlayer.stop()
-        audioPlayer.rate = 2.0
+        audioPlayer.rate = 1.5
+        audioPlayer.currentTime = 0.0
         audioPlayer.play()
     }
     
