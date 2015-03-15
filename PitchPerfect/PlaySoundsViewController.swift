@@ -32,7 +32,6 @@ class PlaySoundsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     @IBAction func slowAudio(sender: UIButton) {
         //Used slowAudio as func name instead of playSlowAudio
@@ -40,7 +39,12 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.rate = 0.5
         audioPlayer.play()
         println("In slowAudio func")
-        
+    }
+    
+    @IBAction func fastAudio(sender: UIButton) {
+        audioPlayer.stop()
+        audioPlayer.rate = 2.0
+        audioPlayer.play()
     }
     /*
     // MARK: - Navigation

@@ -121,6 +121,9 @@
                                 <state key="normal" image="fastButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="fastAudio:" destination="pA8-CK-Woa" eventType="touchUpInside" id="CmY-28-BG1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
