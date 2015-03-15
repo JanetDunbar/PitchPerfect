@@ -125,9 +125,32 @@
                                     <action selector="fastAudio:" destination="pA8-CK-Woa" eventType="touchUpInside" id="CmY-28-BG1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCe-vI-DyY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="264" y="124" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s5-LT-ei2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="158" y="414" width="105" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopAudio:" destination="pA8-CK-Woa" eventType="touchUpInside" id="kcU-nx-R8b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gpT-gS-AwI" firstAttribute="top" secondItem="9s5-LT-ei2" secondAttribute="bottom" constant="136" id="ETK-0T-B3h"/>
+                            <constraint firstAttribute="centerX" secondItem="9s5-LT-ei2" secondAttribute="centerX" constant="-10.5" id="OpR-oz-Kn2"/>
                             <constraint firstItem="OlL-Jp-Si6" firstAttribute="top" secondItem="o9b-XO-1Yb" secondAttribute="bottom" constant="50" id="XrU-Y8-fLu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OlL-Jp-Si6" secondAttribute="trailing" constant="30" id="bvM-V0-VdU"/>
                             <constraint firstItem="Tcx-5E-JNc" firstAttribute="leading" secondItem="TzL-8h-NaQ" secondAttribute="leadingMargin" constant="30" id="ro2-TI-pcG"/>
@@ -137,24 +160,32 @@
                             <mask key="subviews">
                                 <exclude reference="Tcx-5E-JNc"/>
                                 <exclude reference="OlL-Jp-Si6"/>
+                                <exclude reference="KCe-vI-DyY"/>
+                                <exclude reference="9s5-LT-ei2"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="ro2-TI-pcG"/>
                                 <exclude reference="wN2-iU-l8f"/>
                                 <exclude reference="XrU-Y8-fLu"/>
                                 <exclude reference="bvM-V0-VdU"/>
+                                <exclude reference="OpR-oz-Kn2"/>
+                                <exclude reference="ETK-0T-B3h"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Tcx-5E-JNc"/>
                                 <include reference="OlL-Jp-Si6"/>
+                                <include reference="KCe-vI-DyY"/>
+                                <include reference="9s5-LT-ei2"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="ro2-TI-pcG"/>
                                 <include reference="wN2-iU-l8f"/>
                                 <include reference="XrU-Y8-fLu"/>
                                 <include reference="bvM-V0-VdU"/>
+                                <include reference="OpR-oz-Kn2"/>
+                                <include reference="ETK-0T-B3h"/>
                             </mask>
                         </variation>
                     </view>
