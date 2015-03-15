@@ -59,7 +59,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
-        //Save the recorded Audio
+        //Step 1 - Save the recorded Audio
+        
+        //Step 2 - Move to the next scene aka perform segue
     }
 
     @IBAction func stopAudio(sender: UIButton) {
