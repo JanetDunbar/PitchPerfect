@@ -30,6 +30,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(animated: Bool) {
         //Hide the stop button
         stopButton.hidden = true
+        //added line below to make microphone reappear when user goes back to record page
+        recordButton.enabled = true
     }
 
     @IBAction func recordAudio(sender: UIButton) {
