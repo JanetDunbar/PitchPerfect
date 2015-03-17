@@ -47,6 +47,9 @@ class PlaySoundsViewController: UIViewController {
     func changeAudioPlaybackRate(newRate:Float = 1.0){
         //changeAudioPlaybackRate and playback at newRate.
         
+        audioEngine.stop()
+        audioEngine.reset()
+
         audioPlayer.stop()
         audioPlayer.rate = newRate
         audioPlayer.currentTime = 0.0
