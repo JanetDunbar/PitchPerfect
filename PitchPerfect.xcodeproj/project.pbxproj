@@ -170,6 +170,7 @@
 				TargetAttributes = {
 					84D647101AB218E30054B2DF = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = XREGL28FA9;
 					};
 					84D647251AB218E30054B2DF = {
 						CreatedOnToolsVersion = 6.2;
