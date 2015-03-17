@@ -185,16 +185,16 @@
                                 <exclude reference="1D8-9f-qGC"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="ETK-0T-B3h"/>
+                                <exclude reference="7o5-xQ-SON"/>
+                                <exclude reference="PPg-iX-gN5"/>
+                                <exclude reference="OpR-oz-Kn2"/>
+                                <exclude reference="XrU-Y8-fLu"/>
+                                <exclude reference="bvM-V0-VdU"/>
                                 <exclude reference="ro2-TI-pcG"/>
                                 <exclude reference="wN2-iU-l8f"/>
                                 <exclude reference="6Xx-EI-sAc"/>
                                 <exclude reference="bIP-cX-KfR"/>
-                                <exclude reference="XrU-Y8-fLu"/>
-                                <exclude reference="bvM-V0-VdU"/>
-                                <exclude reference="7o5-xQ-SON"/>
-                                <exclude reference="PPg-iX-gN5"/>
-                                <exclude reference="OpR-oz-Kn2"/>
-                                <exclude reference="ETK-0T-B3h"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -207,16 +207,16 @@
                                 <include reference="1D8-9f-qGC"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="ETK-0T-B3h"/>
+                                <include reference="7o5-xQ-SON"/>
+                                <include reference="PPg-iX-gN5"/>
+                                <include reference="OpR-oz-Kn2"/>
+                                <include reference="XrU-Y8-fLu"/>
+                                <include reference="bvM-V0-VdU"/>
                                 <include reference="ro2-TI-pcG"/>
                                 <include reference="wN2-iU-l8f"/>
                                 <include reference="6Xx-EI-sAc"/>
                                 <include reference="bIP-cX-KfR"/>
-                                <include reference="XrU-Y8-fLu"/>
-                                <include reference="bvM-V0-VdU"/>
-                                <include reference="7o5-xQ-SON"/>
-                                <include reference="PPg-iX-gN5"/>
-                                <include reference="OpR-oz-Kn2"/>
-                                <include reference="ETK-0T-B3h"/>
                             </mask>
                         </variation>
                     </view>
