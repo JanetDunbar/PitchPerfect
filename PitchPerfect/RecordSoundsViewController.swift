@@ -10,12 +10,14 @@ import UIKit
 import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
-
+    
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
     var audioRecorder:AVAudioRecorder!
     var recordedAudio:RecordedAudio!
+    
+    //println(recordingInProgress.text)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +34,19 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         stopButton.hidden = true
         //added line below to make microphone reappear when user goes back to record page
         recordButton.enabled = true
+        recordingInProgress.text = "Tap to Record"
+        println(recordingInProgress.text)
+        recordingInProgress.hidden = false
+
     }
 
     @IBAction func recordAudio(sender: UIButton) {
+        
         stopButton.hidden = false
-        recordingInProgress.hidden = false
+        recordingInProgress.text = "recording"
+        println("recordingInProgress.text: \(recordingInProgress.text)")
+        //recordingInProgress.hidden = false
+        
         recordButton.enabled = false
         //TODO: Record the user's voice
         println("in recordAudio")
