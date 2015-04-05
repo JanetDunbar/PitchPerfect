@@ -51,10 +51,7 @@ class PlaySoundsViewController: UIViewController {
     func changeAudioPlaybackRate(newRate:Float = 1.0){
         //changeAudioPlaybackRate and playback at newRate.
         
-        audioEngine.stop()
-        audioEngine.reset()
-
-        audioPlayer.stop()
+        resetAudio()
         audioPlayer.rate = newRate
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
@@ -63,11 +60,16 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func playChipmunkAudio(sender: UIButton) {
         playAudioWithVariablePitch(1000)
     }
-    
-    func playAudioWithVariablePitch(pitch: Float){
+    func resetAudio()
+    {
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
+    }
+    
+    func playAudioWithVariablePitch(pitch: Float){
+        
+        resetAudio()
         
         audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -91,6 +93,6 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
-        audioPlayerNode.stop()        
+        audioPlayerNode.stop()
     }
 }
