@@ -36,11 +36,9 @@ class PlaySoundsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func slowAudio(sender: UIButton) {
-        //Used slowAudio as func name instead of playSlowAudio
         changeAudioPlaybackRate(newRate: 0.5)
     }
     
@@ -49,7 +47,6 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func changeAudioPlaybackRate(newRate:Float = 1.0){
-        //changeAudioPlaybackRate and playback at newRate.
         
         resetAudio()
         audioPlayer.rate = newRate
